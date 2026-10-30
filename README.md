@@ -10,23 +10,23 @@ Marketing teams need to know who clicks their links. Build a shortener with a re
 
 ## Must-have (core, do these first)
 
-- [ ] Create short links (auth required)
-- [ ] Fast redirect /r/:code
-- [ ] Track every click (time, device, referrer)
-- [ ] Stats endpoint + dashboard chart
+- [x] Create short links (auth required)
+- [x] Fast redirect /r/:code
+- [x] Track every click (time, device, referrer)
+- [x] Stats endpoint + dashboard chart
 
 ## Bonus (only after the core works end to end)
 
 - [ ] Redis cache for redirects
-- [ ] Rate limiting per user/IP
-- [ ] Custom aliases and expiry dates
-- [ ] Unique vs total clicks
+- [x] Rate limiting per user/IP
+- [x] Custom aliases and expiry dates
+- [x] Unique vs total clicks
 
 ## Industry-level tech we expect you to use
 
 - PostgreSQL
 - Redis
-- JWT auth
+- JWT auth 
 - Rate limiting
 
 A toy in-memory demo is not enough. Use real tools (database, auth, queue, model etc.) where it makes sense.
@@ -46,7 +46,7 @@ Pick **ONE** stack and delete the other, or keep both if you want. Both expose t
 | `GET` | `/health` | Already working |
 | `POST` | `/api/shorten` | Body: {url, alias?} -> {code} |
 | `GET` | `/r/:code` | Redirect to the original URL |
-| `GET` | `/api/stats/:code` | Click analytics for a link |
+| `GET` | `/api/stats/:code` | Click analytics for a link | 
 
 All the endpoints above return `501 Not Implemented` until you build them. Add more endpoints if you need.
 
@@ -93,3 +93,6 @@ Add the live URL at the top of your PR description.
 Working demo (35%) | Technical depth (25%) | Completeness of core features (20%) | Deployment (10%) | Presentation (10%)
 
 Good luck, build something great!
+
+
+chekpoint '
